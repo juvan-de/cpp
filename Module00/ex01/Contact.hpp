@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   contact.hpp                                        :+:    :+:            */
+/*   Contact.hpp                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/03 15:32:21 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/04 17:21:01 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/09/21 14:28:28 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,7 @@ class Contact {
 	void	printAll(void) const;
 
 	private:
-	std::string	_firstName;
-	std::string	_lastName;
-	std::string	_nickname;
-	std::string	_login;
-	std::string	_postalAddress;
-	std::string	_emailAddress;
-	std::string	_phoneNumber;
-	std::string	_birthdayDate;
-	std::string	_favoriteMeal;
-	std::string	_underwearColor;
-	std::string	_darkestSecret;
+	std::string	_field[5];
 };
 
 #endif

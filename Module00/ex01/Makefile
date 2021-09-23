@@ -6,13 +6,14 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/06 02:09:11 by julesvander   #+#    #+#                  #
-#    Updated: 2021/09/21 14:59:55 by juvan-de      ########   odam.nl          #
+#    Updated: 2021/09/21 13:31:38 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= 	megaphone
+NAME 		= 	phonebook
 
-SOURCES		= 	megaphone.cpp
+SOURCES		= 	Contact.cpp \
+				main.cpp
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 

@@ -15,18 +15,20 @@
 #include <iomanip>
 
 
-Contact::Contact() {
+Contact::Contact() 
+{
 	return;
 }
 
-Contact::~Contact(void) {
+Contact::~Contact(void) 
+{
 	return;
 }
 
 void	Contact::getInfo(void) const {
-	printInfo(this->_firstName);
-	printInfo(this->_lastName);
-	printInfo(this->_nickname);
+	printInfo(this->_field[0]);
+	printInfo(this->_field[1]);
+	printInfo(this->_field[2]);
 	std::cout << std::endl;
 }
 
@@ -39,53 +41,30 @@ void	Contact::printInfo(std::string content) const {
 	std::cout << std::setfill (' ') << std::setw(10) << content << "|";
 }
 
-void	Contact::setInfo(void){
+void		Contact::setInfo(void){
+	std::string str[5];
+
+	str[0] = "Enter a first name.";
+	str[1] = "Enter a last name";
+	str[2] = "Enter a nickname";
+	str[3] = "Enter a phone number";
+	str[4] = "Enter a darkest secret";
+
 	std::cout << "We are now going to add a contact:" << std::endl;
-	std::cout << "Enter a first name." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_firstName);
-	std::cout << "Enter a last name" << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_lastName);
-	std::cout << "Enter a nickname." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_nickname);
-	std::cout << "Enter a login." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_login);
-	std::cout << "Enter a postal address." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_postalAddress);
-	std::cout << "Enter a email address." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_emailAddress);
-	std::cout << "Enter a phone number." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_phoneNumber);
-	std::cout << "Enter a birthday." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_birthdayDate);
-	std::cout << "Enter a favorite meal." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_favoriteMeal);
-	std::cout << "Enter a underwear color." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_underwearColor);
-	std::cout << "Enter a darkest secret." << std::endl; 
-	std::cout << "Enter here: ";
-	std::getline(std::cin, this->_darkestSecret);
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << str[i] << std::endl;
+		std::cout << "Enter here: ";
+		std::getline(std::cin, this->_field[i]);
+		if (std::cin.eof())
+			return ;
+	}
 }
 
-void	Contact::printAll(void) const {
-	std::cout << this->_firstName << std::endl;
-	std::cout << this->_lastName << std::endl;
-	std::cout << this->_nickname << std::endl;
-	std::cout << this->_login << std::endl;
-	std::cout << this->_postalAddress << std::endl;
-	std::cout << this->_emailAddress << std::endl;
-	std::cout << this->_phoneNumber << std::endl;
-	std::cout << this->_birthdayDate << std::endl;
-	std::cout << this->_favoriteMeal << std::endl;
-	std::cout << this->_underwearColor << std::endl;
-	std::cout << this->_darkestSecret << std::endl;
+void	Contact::printAll(void) const 
+{
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << this->_field[i] << std::endl;
+	}
 }
