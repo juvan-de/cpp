@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Zombie.hpp                                         :+:    :+:            */
+/*   newZombie.cpp                                      :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
+/*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/07 21:45:47 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/11 16:15:27 by julesvander   ########   odam.nl         */
+/*   Created: 2021/09/23 15:51:20 by juvan-de      #+#    #+#                 */
+/*   Updated: 2021/09/23 15:57:11 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-#include <iostream>
+#include "Zombie.hpp"
 
-class Zombie	{
+Zombie* newZombie(std::string name)
+{
+    Zombie *instance = new Zombie(name);
 
-	public:
-
-	Zombie(std::string name, std::string type);
-	~Zombie();
-	void	announce();
-
-	private:
-
-	std::string	_type;
-	std::string	_name;
-	
-};
-
-#endif
+    return (instance);
+}

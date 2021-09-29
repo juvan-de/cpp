@@ -6,16 +6,17 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/24 15:45:06 by julesvander   #+#    #+#                  #
-#    Updated: 2021/02/24 15:45:38 by julesvander   ########   odam.nl          #
+#    Updated: 2021/09/28 14:35:44 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME 		= 	Zombiehorde
+NAME 		= 	weapon
 
 SOURCES		= 	main.cpp \
-				Zombie.cpp \
-				ZombieHorde.cpp \
+				Weapon.cpp \
+				HumanA.cpp \
+				HumanB.cpp
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 

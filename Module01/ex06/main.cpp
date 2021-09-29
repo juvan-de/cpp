@@ -6,26 +6,21 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/16 16:08:52 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/18 14:51:16 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/09/29 17:45:08 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
 #include <iostream>
+#include "Karen.hpp"
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	Weapon club = Weapon("crude spiked club");
-	HumanA bob("bob", club);
-	HumanB jim("Jim");
-	bob.attack();
-	club.setType("dildo");
-	bob.attack();
-	jim.setWeapon(club);
-	jim.attack();
-	club.setType("some other type of club");
-	jim.attack();
-	bob.attack();
+	Karen karen;
+	if (argc == 2)
+	{
+		karen.complain(argv[1]);
+	}
+	else
+		std::cout << "this program only takes 1 argument" << std::endl;
+	return (0);
 }

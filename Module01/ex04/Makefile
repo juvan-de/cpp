@@ -5,15 +5,14 @@
 #                                                      +:+                     #
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
-#    Created: 2021/02/24 15:45:55 by julesvander   #+#    #+#                  #
-#    Updated: 2021/02/24 15:46:02 by julesvander   ########   odam.nl          #
+#    Created: 2021/02/18 15:01:24 by julesvander   #+#    #+#                  #
+#    Updated: 2021/02/18 15:13:15 by julesvander   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
+NAME 		= 	replace
 
-NAME 		= 	ex04
-
-SOURCES		= 	ex04.cpp
+SOURCES		= 	main.cpp
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 

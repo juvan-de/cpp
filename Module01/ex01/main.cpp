@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Human.cpp                                          :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/15 11:30:03 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/16 16:06:39 by julesvander   ########   odam.nl         */
+/*   Created: 2021/02/07 21:41:00 by julesvander   #+#    #+#                 */
+/*   Updated: 2021/09/28 14:01:04 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include "Zombie.hpp"
 
-Human::Human() {
-
-}
-
-const Brain &Human::getBrain() const {
-	
-	return (this->_Brain);
-}
-
-const Brain *Human::identify() const {
-
-	return (this->_Brain.identify());
-}
-
-Human::~Human() {
-	
+int	main(void)
+{
+	Zombie *horde;
+	horde = zombieHorde(5, "bob");
+	for (int i = 0; i < 5; i++)
+	{
+		horde[i].announce();
+	}
+	return (0);
 }

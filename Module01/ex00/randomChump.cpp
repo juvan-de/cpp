@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Brain.hpp                                          :+:    :+:            */
+/*   randomChump.cpp                                    :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
+/*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/15 11:30:05 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/16 15:23:10 by julesvander   ########   odam.nl         */
+/*   Created: 2021/09/23 15:51:29 by juvan-de      #+#    #+#                 */
+/*   Updated: 2021/09/23 15:56:18 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
-# include <iostream>
+#include "Zombie.hpp"
 
-class Brain	{
-
-	public:
-
-	Brain();
-	~Brain();
-	const Brain *identify() const;
-
-	private:
-	
-};
-
-#endif
+void    randomChump(std::string name)
+{
+    Zombie randomChump = Zombie(name);
+    randomChump.announce();
+}

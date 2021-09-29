@@ -6,13 +6,15 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/18 15:00:42 by julesvander   #+#    #+#                  #
-#    Updated: 2021/02/18 15:00:53 by julesvander   ########   odam.nl          #
+#    Updated: 2021/09/23 16:03:53 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= 	ex01
+NAME 		= 	zombiehorde
 
-SOURCES		= 	ex01.cpp
+SOURCES		= 	main.cpp \
+				Zombie.cpp \
+				ZombieHorde.cpp
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 

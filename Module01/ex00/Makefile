@@ -6,14 +6,16 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/18 14:58:46 by julesvander   #+#    #+#                  #
-#    Updated: 2021/02/18 14:59:54 by julesvander   ########   odam.nl          #
+#    Updated: 2021/09/23 15:59:24 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= 	pony
+NAME 		= 	Zombie
 
 SOURCES		= 	main.cpp \
-				Pony.cpp
+				Zombie.cpp \
+				newZombie.cpp \
+				randomChump.cpp 
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 

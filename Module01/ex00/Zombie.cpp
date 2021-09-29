@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   Zombie.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/07 21:41:00 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/07 21:43:47 by julesvander   ########   odam.nl         */
+/*   Created: 2021/02/07 21:52:39 by julesvander   #+#    #+#                 */
+/*   Updated: 2021/09/23 16:01:31 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-void	memoryLeak()
+Zombie::Zombie(std::string name) : _name(name) 
 {
-	std::string* panther = new std::string("String panther");
-	std::cout << *panther << std::endl;
-	delete panther;
+	std::cout << "Zombie " << name << " is created" << std::endl;
+	return ;
 }
 
-int	main(void)
+Zombie::~Zombie() 
 {
-	memoryLeak();
-	return (0);
+	std::cout << "Zombie " << this->_name << " is destroyed" << std::endl;
+	return ;
+}
+
+void	Zombie::announce() {
+	std::cout << "<" << this->_name << "> BraiiiiiiinnnzzzZ..." << std::endl;
 }

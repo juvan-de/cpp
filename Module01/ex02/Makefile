@@ -6,15 +6,14 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/24 15:44:15 by julesvander   #+#    #+#                  #
-#    Updated: 2021/02/24 15:44:46 by julesvander   ########   odam.nl          #
+#    Updated: 2021/09/28 14:22:40 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= 	Zombie
+NAME 		= 	reference
 
 SOURCES		= 	main.cpp \
-				Zombie.cpp \
-				ZombieEvent.cpp \
+				
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 

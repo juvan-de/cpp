@@ -6,16 +6,15 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/24 15:46:09 by julesvander   #+#    #+#                  #
-#    Updated: 2021/02/24 15:48:34 by julesvander   ########   odam.nl          #
+#    Updated: 2021/09/29 17:29:52 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME 		= 	Brains
+NAME 		= 	karen
 
-SOURCES		= 	Brain.cpp \
-				Human.cpp \
-				main.cpp \
+SOURCES		= 	main.cpp \
+				Karen.cpp 
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 

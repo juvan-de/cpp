@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/18 15:02:17 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/21 15:17:00 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/09/29 13:38:33 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 
 std::string		replace(std::string content, std::string original, std::string replace)
 {
-	if (content.find(original) < content.length())
+	int start = content.find(original);
+	if (original.length() > replace.length())
 	{
-		content.replace(content.find(original), original.length(), replace);
+		content.erase(start, original.length());
+		content.insert(start, replace);
 	}
 	return (content);
 }
@@ -37,8 +39,13 @@ int		main(int argc, char **argv)
 		out.open(file.append(".replace"));
 		while (getline(ifs, buffer))
 		{
-			replaced = replace(buffer, (std::string)argv[2], (std::string)argv[3]);
-			out << replaced << std::endl;
+			if (buffer.find((std::string)argv[2]) < buffer.length())
+			{
+				replaced = replace(buffer, (std::string)argv[2], (std::string)argv[3]);
+				out << replaced << std::endl;
+			}
+			else
+				out << buffer << std::endl;
 		}
 	}
 	else

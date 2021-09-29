@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   pony.hpp                                           :+:    :+:            */
+/*   Zombie.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/07 18:20:29 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/07 21:46:55 by julesvander   ########   odam.nl         */
+/*   Created: 2021/02/07 21:45:47 by julesvander   #+#    #+#                 */
+/*   Updated: 2021/09/23 15:55:50 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_H
-# define PONY_H
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 #include <iostream>
 
-class Pony	{
+class Zombie	{
 
 	public:
 
-	Pony(std::string name, std::string age, std::string food);
-	~Pony(void);
-	void	getInfo(void) const;
-	std::string	getName(void) const;
-	
+	Zombie(std::string name);
+	~Zombie();
+	void	announce(void);
+
 	private:
 
 	std::string	_name;
-	std::string	_age;
-	std::string	_favoriteFood;
+	
 };
+
+Zombie* newZombie(std::string name);
+void    randomChump(std::string name);
 
 #endif

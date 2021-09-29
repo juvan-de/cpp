@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/18 12:49:31 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/18 14:27:26 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/09/28 14:33:42 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class HumanA {
 	private:
 
 	std::string _name;
-	Weapon &_weapon;
+	Weapon 		&_weapon;
 };
 
 #endif

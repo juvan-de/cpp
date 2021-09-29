@@ -6,17 +6,16 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/24 15:48:48 by julesvander   #+#    #+#                  #
-#    Updated: 2021/02/24 15:49:25 by julesvander   ########   odam.nl          #
+#    Updated: 2021/09/29 17:37:29 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME 		= 	Weapons
+NAME 		= 	karenFilter
 
-SOURCES		= 	HumanA.cpp \
-				HumanB.cpp \
-				Weapon.cpp \
-				main.cpp
+SOURCES		= 	main.cpp \
+				Karen.cpp
+				
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 

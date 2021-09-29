@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Human.hpp                                          :+:    :+:            */
+/*   Weapon.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/15 11:30:01 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/16 16:01:05 by julesvander   ########   odam.nl         */
+/*   Created: 2021/02/16 16:10:03 by julesvander   #+#    #+#                 */
+/*   Updated: 2021/09/28 14:35:24 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_HPP
-# define HUMAN_HPP
-# include "Brain.hpp"
+#include "Weapon.hpp"
 
-class Human {
+Weapon::Weapon(std::string name)
+{
+	this->_type = name;
+}
 
-	public:
+Weapon::~Weapon()
+{
 
-	Human();
-	~Human();
-	const Brain &getBrain() const;
-	const Brain *identify() const;
+}
 
-	private:
-	
-	Brain const _Brain;
+std::string const &Weapon::getType() const {
+	std::string const &strREF = this->_type;
+	return (strREF);
+}
 
-};
-
-#endif
+void	Weapon::setType(std::string type) {
+	this->_type = type;
+}

@@ -6,25 +6,25 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/08 16:07:42 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/11 17:22:44 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/09/28 14:23:31 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include "ZombieEvent.hpp"
 #include <iostream>
 
 int		main(void)
 {
-	ZombieEvent	newZombie;
-	
-	newZombie.setZombieType("deathlord");
-	Zombie *zombieOne = newZombie.newZombie("Hank");
-	newZombie.setZombieType("brainiac");
-	newZombie.randomChump();
-	newZombie.randomChump();
-	newZombie.randomChump();
-	delete zombieOne;
-	
+	std::string string = "HI THIS IS BRAIN";
+	std::string *strPTR = &string;
+	std::string &strREF = string;
+
+	std::cout << "String address:" << std::endl;
+	std::cout << &string << std::endl;
+	std::cout << strPTR << std::endl;
+	std::cout << &strREF << std::endl;
+
+	std::cout << "String:" << std::endl;
+	std::cout << *strPTR << std::endl;
+	std::cout << strREF << std::endl;
 	return (0);
 }
