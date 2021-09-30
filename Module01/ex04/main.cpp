@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/18 15:02:17 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/29 13:38:33 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/09/30 15:04:20 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,16 @@
 
 std::string		replace(std::string content, std::string original, std::string replace)
 {
-	int start = content.find(original);
-	if (original.length() > replace.length())
+	size_t start = 0;
+	while (start != std::string::npos)
 	{
-		content.erase(start, original.length());
-		content.insert(start, replace);
+		start = content.find(original, start);
+		if (start != std::string::npos)
+		{
+			content.erase(start, original.length());
+			content.insert(start, replace);
+			start += replace.length();
+		}
 	}
 	return (content);
 }
