@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/24 15:17:19 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/05/27 15:17:08 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/11 13:43:13 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 #include <cmath>
 
 Fixed::Fixed() {
-	this->_fixed_point = 0;
 	std::cout << "Default constructor called" << std::endl;
+	this->_fixed_point = 0;
 }
 
 Fixed::Fixed(const int num) {
+	std::cout << "Int constructor called" << std::endl;
 	this->_fixed_point = num << this->_frac_bits;
 }
 
 Fixed::Fixed(const float num) {
+	std::cout << "Float constructor called" << std::endl;
 	float	temp;
 	temp = num;
 	temp *= 256;
@@ -32,8 +34,8 @@ Fixed::Fixed(const float num) {
 }
 
 Fixed::Fixed(Fixed const & instance) {
-	*this = instance;
 	std::cout << "Copy constructor called" << std::endl;
+	*this = instance;
 }
 
 Fixed::~Fixed() {

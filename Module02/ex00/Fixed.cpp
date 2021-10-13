@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/24 15:17:19 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/02/24 15:41:22 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/11 13:41:12 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Fixed::Fixed() {
 }
 
 Fixed::Fixed(Fixed const & instance) {
-	*this = instance;
 	std::cout << "Copy constructor called" << std::endl;
+	*this = instance;
 }
 
 Fixed::~Fixed() {
