@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/24 15:17:19 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/10/13 18:05:07 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/10/14 14:35:51 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,47 +56,51 @@ bool	Fixed::operator>(Fixed const & rhs) const
 	return (false);
 }
 
-bool	Fixed::operator>=(Fixed const & rhs) const; 
+bool	Fixed::operator>=(Fixed const & rhs) const
 {
 	if (this->getRawBits() >= rhs.getRawBits())
 		return (true);
 	return (false);
 }
 
-bool	Fixed::operator<=(Fixed const & rhs) const; 
+bool	Fixed::operator<=(Fixed const & rhs) const
 {
 	if (this->getRawBits() <= rhs.getRawBits())
 		return (true);
 	return (false);
 }
 
-bool	Fixed::operator==(Fixed const & rhs) const; 
+bool	Fixed::operator==(Fixed const & rhs) const 
 {
 	if (this->getRawBits() == rhs.getRawBits())
 		return (true);
 	return (false);
 }
 
-bool	Fixed::operator!=(Fixed const & rhs) const; 
+bool	Fixed::operator!=(Fixed const & rhs) const
 {
 	if (this->getRawBits() != rhs.getRawBits())
 		return (true);
 	return (false);
 }
 
-Fixed	&Fixed::operator+(Fixed const & rhs) const;
+Fixed	Fixed::operator+(Fixed const & rhs)
 {
-	this->_fixed_point = this->getRawBits() + rhs.getRawBits();
-	return (*this);
+	float value;
+	value = this->toFloat() + rhs.toFloat();
+	Fixed temp(value);
+	return (temp);
 }
 
-Fixed	&Fixed::operator-(Fixed const & rhs) const;
+Fixed	Fixed::operator-(Fixed const & rhs)
 {
-	this->_fixed_point = this->getRawBits() - rhs.getRawBits();
-	return (*this);
+	float value;
+	value = this->toFloat() - rhs.toFloat();
+	Fixed temp(value);
+	return (temp);
 }
 
-Fixed	Fixed::operator*(Fixed const & rhs) const;
+Fixed	Fixed::operator*(Fixed const & rhs)
 {
 	float value;
 	value = this->toFloat() * rhs.toFloat();
@@ -104,7 +108,7 @@ Fixed	Fixed::operator*(Fixed const & rhs) const;
 	return (temp);
 }
 
-Fixed	Fixed::operator/(Fixed const & rhs) const;
+Fixed	Fixed::operator/(Fixed const & rhs)
 {
 	float value;
 	value = this->toFloat() / rhs.toFloat();
