@@ -1,14 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ICharacter.cpp                                     :+:    :+:            */
+/*   Cure.hpp                                           :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
+/*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/18 15:01:49 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/06 16:26:41 by julesvander   ########   odam.nl         */
+/*   Created: 2021/09/13 17:35:10 by juvan-de      #+#    #+#                 */
+/*   Updated: 2021/09/13 17:35:36 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#ifndef CURE_HPP
+# define CURE_HPP
+# include <iostream>
+# include "AMateria.hpp"
 
+class Cure : public AMateria
+{
+	public:
+	Cure();
+	~Cure();
+	virtual AMateria* clone() const;
+	virtual void use(ICharacter& target);
+};
+
+#endif

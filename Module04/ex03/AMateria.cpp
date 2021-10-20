@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/18 15:00:25 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/06 16:12:37 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/09/13 17:26:43 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 AMateria::AMateria()
 {
-
+	std::cout << "materia build" << std::endl;
 }
 
 AMateria::~AMateria()
@@ -31,4 +31,10 @@ AMateria::AMateria(std::string const & type)
 std::string const & AMateria::getType() const
 {
 	return (this->type);
+}
+
+void	AMateria::use(ICharacter& target)
+{
+	std::cout << "this shouldn't be printed like ever.." << std::endl;
+	(void)target;
 }

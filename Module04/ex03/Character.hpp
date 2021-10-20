@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/18 17:48:09 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/06 16:56:55 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/09/20 11:22:01 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Character : public ICharacter
 	std::string	name;
 
 	public:
+	AMateria *materias[4];
 	Character(std::string const name);
 	Character(Character const & ref);
 	Character &operator=(Character & rhs);

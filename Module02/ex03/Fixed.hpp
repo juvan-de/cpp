@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/24 14:43:37 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/10/14 14:46:26 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/10/14 15:39:37 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ class Fixed {
 	bool			operator<=(Fixed const & rhs) const;
 	bool			operator==(Fixed const & rhs) const;
 	bool			operator!=(Fixed const & rhs) const;
-	Fixed			operator+(Fixed const & rhs);
-	Fixed			operator-(Fixed const & rhs);
-	Fixed			operator*(Fixed const & rhs);
-	Fixed			operator/(Fixed const & rhs);
+	Fixed			operator+(Fixed const & rhs) const;
+	Fixed			operator-(Fixed const & rhs) const;
+	Fixed			operator*(Fixed const & rhs) const;
+	Fixed			operator/(Fixed const & rhs) const;
 	Fixed			&operator++();
 	Fixed			operator++(int);
 	Fixed			&operator--();

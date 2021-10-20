@@ -5,26 +5,23 @@
 #                                                      +:+                     #
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
-#    Created: 2021/03/03 15:38:24 by julesvander   #+#    #+#                  #
-#    Updated: 2021/09/20 11:36:37 by juvan-de      ########   odam.nl          #
+#    Created: 2021/02/24 15:50:53 by julesvander   #+#    #+#                  #
+#    Updated: 2021/10/13 15:16:35 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME 		= 	abstracts
+NAME 		= 	Fixed
 
-SOURCES		= \
-				AMateria.cpp \
-				Ice.cpp \
-				Cure.cpp \
-				Character.cpp \
-				MateriaSource.cpp \
+SOURCES		= 	Fixed.cpp \
+				Point.cpp \
 				main.cpp
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 
 FLAGS 		=	-Wall -Wextra -Werror -std=c++98
 COMPILE		=	clang++
+
 
 GREEN 		= 	\033[38;5;46m
 WHITE 		= 	\033[38;5;15m

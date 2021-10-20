@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/18 15:00:33 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/06 16:55:49 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/09/13 17:19:56 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 # include <iostream>
 # include "ICharacter.hpp"
 
+class ICharacter;
+
 class AMateria
 {
 	private:
 
 	protected:
+	AMateria();
 	std::string type;
 
 	public:
-	AMateria();
 	AMateria(std::string const & type);
 	~AMateria();
 	std::string const & getType() const;

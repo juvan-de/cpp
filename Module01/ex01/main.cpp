@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/07 21:41:00 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/28 14:01:04 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/10/11 14:48:01 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ int	main(void)
 	{
 		horde[i].announce();
 	}
+	delete[] horde;
 	return (0);
 }
