@@ -2,17 +2,17 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "ClapTrap created" << std::endl;
+
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _attackDamage(0), _energyPoints(10)
 {
-	std::cout << "ClapTrap created with name: "<< _name << std::endl;
+
 }
 
 ClapTrap::ClapTrap(const ClapTrap& ref) : _name(ref._name), _hitpoints(10), _attackDamage(0), _energyPoints(10)
 {
-	std::cout << "ClapTrap copied" << std::endl;	
+	
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& ref)
@@ -23,7 +23,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& ref)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap destroyed" << std::endl;
+
 }
 
 

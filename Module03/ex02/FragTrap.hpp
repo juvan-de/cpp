@@ -3,41 +3,32 @@
 /*                                                        ::::::::            */
 /*   FragTrap.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
+/*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/03/03 14:41:56 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/06/14 15:04:51 by julesvander   ########   odam.nl         */
+/*   Created: 2021/10/20 14:47:11 by juvan-de      #+#    #+#                 */
+/*   Updated: 2021/10/20 16:20:20 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef FRAG_TRAP_HPP
+# define FRAG_TRAP_HPP
+# include <string>
 # include <iostream>
+# include "ClapTrap.hpp"
 
-class FragTrap {
-
+class	FragTrap : public ClapTrap
+{
 	private:
+
 	FragTrap();
-	int	const _max_health;
-	int	_current_health;
-	int	const _max_energy;
-	int	_current_energy;
-	int	_level;
-	int	const _melee_dmg;
-	int	const _ranged_dmg;
-	int	_armor;
-	std::string _name;
 
 	public:
+	
 	FragTrap(std::string name);
-	FragTrap(FragTrap const & ref);
-	~FragTrap();
-	FragTrap	&operator=(FragTrap const & rhs);
-	void		rangedAttack(std::string const & target);
-	void		meleeAttack(std::string const & target);
-	void		takeDamage(unsigned int amount);
-	void		beRepaired(unsigned int amount);
-	void		vaulthunter_dot_exe(std::string const & target);
+	FragTrap(const FragTrap& ref);
+	FragTrap& operator=(const FragTrap& ref);
+	virtual ~FragTrap();
+	void	highFivesGuys(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/03/03 15:38:24 by julesvander   #+#    #+#                  #
-#    Updated: 2021/03/30 12:02:36 by julesvander   ########   odam.nl          #
+#    Updated: 2021/10/20 16:25:43 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,12 @@ NAME 		= 	Fragtrap
 SOURCES		= 	FragTrap.cpp \
 				ScavTrap.cpp \
 				ClapTrap.cpp \
-				NinjaTrap.cpp \
+				DiamondTrap.cpp \
 				main.cpp
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}
 
-FLAGS 		=	-Wall -Wextra -Werror -std=c++98
+FLAGS 		=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 COMPILE		=	clang++
 
 

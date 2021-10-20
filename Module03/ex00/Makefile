@@ -6,14 +6,14 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/03/03 15:38:24 by julesvander   #+#    #+#                  #
-#    Updated: 2021/03/03 15:38:44 by julesvander   ########   odam.nl          #
+#    Updated: 2021/10/14 18:30:52 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME 		= 	Fragtrap
+NAME 		= 	ClapTrap
 
-SOURCES		= 	FragTrap.cpp \
+SOURCES		= 	ClapTrap.cpp \
 				main.cpp
 
 OBJECTS 	=	${SOURCES:%.cpp=%.o}

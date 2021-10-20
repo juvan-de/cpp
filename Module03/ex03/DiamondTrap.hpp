@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   FragTrap.hpp                                       :+:    :+:            */
+/*   DiamondTrap.hpp                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/10/20 14:47:11 by juvan-de      #+#    #+#                 */
-/*   Updated: 2021/10/20 16:23:40 by juvan-de      ########   odam.nl         */
+/*   Created: 2021/10/20 16:11:45 by juvan-de      #+#    #+#                 */
+/*   Updated: 2021/10/20 16:26:23 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAG_TRAP_HPP
-# define FRAG_TRAP_HPP
-# include <string>
-# include <iostream>
-# include "ClapTrap.hpp"
+#ifndef DIAMOND_TRAP_HPP
+# define DIAMOND_TRAP_HPP
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
 
-class	FragTrap : virtual public ClapTrap
+class	DiamondTrap : public FragTrap, public ScavTrap
 {
-	protected:
-
-	FragTrap();
+	private:
+	DiamondTrap();
+	std::string _name;
 
 	public:
-	
-	FragTrap(std::string name);
-	FragTrap(const FragTrap& ref);
-	FragTrap& operator=(const FragTrap& ref);
-	virtual ~FragTrap();
-	void	highFivesGuys(void);
+	DiamondTrap(std::string name);
+	DiamondTrap(const DiamondTrap& ref);
+	DiamondTrap& operator=(const DiamondTrap& ref);
+	virtual ~DiamondTrap();
+	void	whoAmI(void);
 };
 
 #endif

@@ -6,24 +6,17 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/03 14:41:58 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/03/30 10:07:59 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/20 15:11:45 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	ScavTrap first("Johan");
-	FragTrap second("Derek");
-	srand(time(NULL));
-
-	first.challengeNewcomer();
-	first.meleeAttack("Link");
-	first.rangedAttack("Lonk");
-	first.takeDamage(5);
-	first.beRepaired(20);
+	FragTrap first("Johan");
+	first.highFivesGuys();
 	return (0);
 }

@@ -3,53 +3,63 @@
 /*                                                        ::::::::            */
 /*   ClapTrap.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
+/*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/03/24 10:04:33 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/06/14 15:10:32 by julesvander   ########   odam.nl         */
+/*   Created: 2021/10/20 16:22:05 by juvan-de      #+#    #+#                 */
+/*   Updated: 2021/10/20 16:22:05 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(int const max_health, int current_health, int const max_energy, int current_energy, int level, int const melee_dmg,
-int const ranged_dmg, int armor, std::string name) : _max_health(max_health),
-_current_health(current_health), _max_energy(max_energy),_current_energy(current_energy),
-_level(level), _melee_dmg(melee_dmg), _ranged_dmg(ranged_dmg), _armor(armor), _name(name)
-{	
-	std::cout << "A new capsule is made" << std::endl;
-}
-
-ClapTrap::ClapTrap(ClapTrap const & ref)
+ClapTrap::ClapTrap()
 {
-	*this = ref;
+	std::cout << "ClapTrap created" << std::endl;
 }
 
-void	ClapTrap::takeDamage(unsigned int amount) {
-	if (this->_current_health >= (amount - this->_armor))
-		this->_current_health -= (amount - this->_armor);
-	else
-		this->_current_health = 0;
-	std::cout << "Oof! " << this->_name << "took damage and is at " << this->_current_health << " HP." <<std::endl;
-}
-
-void	ClapTrap::beRepaired(unsigned int amount) {
-	if (this->_current_health + amount <= this->_max_health)
-		this->_current_health += amount;
-	else
-		this->_current_health = this->_max_health;
-	std::cout << this->_name << " repaired itself and now has " << this->_current_health << " HP." << std::endl;
-}
-
-ClapTrap	&ClapTrap::operator=(ClapTrap const & rhs)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _attackDamage(0), _energyPoints(10)
 {
-	this->_level = rhs._level;
-	this->_current_energy = rhs._current_energy;
-	this->_current_health = rhs._current_health;
-	this->_armor = rhs._armor;
+	std::cout << "ClapTrap created with name: "<< _name << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& ref) : _name(ref._name), _hitpoints(10), _attackDamage(0), _energyPoints(10)
+{
+	std::cout << "ClapTrap copied" << std::endl;	
+}
+
+ClapTrap&	ClapTrap::operator=(const ClapTrap& ref)
+{
+	this->_name = ref._name;
 	return (*this);
 }
 
-ClapTrap::~ClapTrap() {
-	std::cout << "The new capsule is destroyed" << std::endl;
+ClapTrap::~ClapTrap()
+{
+	std::cout << "ClapTrap destroyed" << std::endl;
+}
+
+
+void	ClapTrap::attack(std::string const & target)
+{
+	std::cout << "ClapTrap <" << this->_name << "> attacks <" << target << ">, causing <" << this->_attackDamage << "> points of damage!" << std::endl;
+}
+
+void	ClapTrap::takeDamage(unsigned int amount)
+{
+	if (amount < this->_hitpoints)
+	{
+		this->_hitpoints -= amount;
+		std::cout << "ClapTrap <" << this->_name << "> takes " << amount << " points of damage and is at " << this->_hitpoints << " HP" << std::endl;
+	}
+	else
+	{
+		this->_hitpoints = 0;
+		std::cout << "The attack was fatal, ClapTrap is now at 0 HP." << std::endl;
+	}
+}
+
+void	ClapTrap::beRepaired(unsigned int amount)
+{
+	this->_hitpoints += amount;
+	std::cout << "ClapTrap <" << this->_name << "> is healed for " << amount << " and is now at " << this->_hitpoints << " HP." << std::endl;
 }

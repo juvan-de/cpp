@@ -3,55 +3,53 @@
 /*                                                        ::::::::            */
 /*   FragTrap.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
+/*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/03/03 14:41:43 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/03/30 13:30:05 by julesvander   ########   odam.nl         */
+/*   Created: 2021/10/20 14:47:14 by juvan-de      #+#    #+#                 */
+/*   Updated: 2021/10/20 16:23:02 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-#include <iostream>
-#include <array>
 
-FragTrap::FragTrap(std::string name) : ClapTrap(100, 100, 100, 100, 1, 30, 20, 5, name)
+FragTrap::FragTrap()
 {
-	std::cout << "A FR4G-TP is created" << std::endl;
+	std::cout << "FragTrap was created" << std::endl;
+}
+
+FragTrap::FragTrap(std::string name)
+{
 	this->_name = name;
+	this->_hitpoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 3;
+	std::cout << "FragTrap " << this->_name << " was created" << std::endl;
 }
 
-FragTrap::~FragTrap() {
-	std::cout << "FR4G-TP " << this->_name << " is dead" << std::endl;
-}
-
-FragTrap::FragTrap(FragTrap const & copy) : ClapTrap(copy)
+FragTrap::FragTrap(const FragTrap& ref)
 {
-	
+	this->_name = ref._name;
+	this->_hitpoints = ref._hitpoints;
+	this->_energyPoints = ref._energyPoints;
+	this->_attackDamage = ref._attackDamage;
+	std::cout << "FragTrap " << ref._name << "was copied to a new shell" << std::endl;
 }
 
-void	FragTrap::rangedAttack(std::string const & target) {
-	std::cout << "FR4G-TP " << this->_name << " attacks " << target << " at range, causing " << this->_ranged_dmg << " points of damage " << std::endl;
+FragTrap&	FragTrap::operator=(const FragTrap& ref)
+{
+	this->_name = ref._name;
+	this->_hitpoints = ref._hitpoints;
+	this->_energyPoints = ref._energyPoints;
+	this->_attackDamage = ref._attackDamage;
+	return (*this);
 }
 
-void	FragTrap::meleeAttack(std::string const & target) {
-	std::cout << "FR4G-TP " << this->_name << " attacks " << target << " at melee range, causing " << this->_melee_dmg << " points of damage " << std::endl;
+FragTrap::~FragTrap()
+{
+	std::cout << "FragTrap destroyed" << std::endl;
 }
 
-void	FragTrap::vaulthunter_dot_exe(std::string const & target) {
-	int	i;
-	std::array<std::string, 5> attacks;
-
-	attacks[0] = " flings poop ";
-	attacks[1] = " fires his lazor ";
-	attacks[2] = " looks seducingly ";
-	attacks[3] = " coughs ";
-	attacks[4] = " explodes ";
-
-	if (this->_current_energy >= 25)
-	{
-		this->_current_energy -= 25;
-		std::cout << "FR4G-TP " << this->_name << attacks[rand() % 5] << "at " << target << std::endl;
-	}
-	else
-		std::cout << "FR4G-TP " << this->_name << " is out of energy." << std::endl;
+void	FragTrap::highFivesGuys(void)
+{
+	std::cout << "High five guys!" << std::endl;
 }

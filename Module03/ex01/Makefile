@@ -6,14 +6,14 @@
 #    By: julesvanderhoek <julesvanderhoek@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/03/03 15:38:24 by julesvander   #+#    #+#                  #
-#    Updated: 2021/03/24 09:49:48 by julesvander   ########   odam.nl          #
+#    Updated: 2021/10/20 14:11:12 by juvan-de      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME 		= 	Fragtrap
 
-SOURCES		= 	FragTrap.cpp \
+SOURCES		= 	ClapTrap.cpp \
 				ScavTrap.cpp \
 				main.cpp
 
