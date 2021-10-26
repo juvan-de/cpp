@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 15:31:45 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/18 14:48:02 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/22 14:58:48 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Dog : public AAnimal
 	virtual ~Dog();
 	std::string	getType() const;
 	Dog	&operator=(Dog const & ref);
-	virtual void	makeSound() const;
+	void	makeSound() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 16:52:54 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/18 11:41:23 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/22 14:39:06 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 WrongCat::WrongCat()
 {
 	std::cout << "WrongCat created" << std::endl;
-	type = "WrongCat";
+	_type = "WrongCat";
 }
 
 WrongCat::WrongCat(WrongCat const & ref)
 {
-	this->type = ref.type;
+	this->_type = ref._type;
 }
 
 WrongCat	&WrongCat::operator=(WrongCat const & rhs)
 {
-	this->type = rhs.type;
+	this->_type = rhs._type;
 	std::cout << "WrongCat copied" << std::endl;
 	return (*this);
 }
 
 std::string	WrongCat::getType() const
 {
-	return(this->type);
+	return(this->_type);
 }
 
 WrongCat::~WrongCat()

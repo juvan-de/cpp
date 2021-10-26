@@ -6,16 +6,11 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/18 17:47:57 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/20 13:08:27 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/10/26 16:47:36 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
-
-Character::Character()
-{
-	std::cout << "character is created" << std::endl;
-}
 
 Character::~Character()
 {
@@ -30,12 +25,21 @@ Character::Character(std::string const name)
 
 Character::Character(Character const & ref)
 {
-	this->name = ref.name;
+	std::cout << "character copied" << std::endl;
+	*this = ref;
 }
 
-Character &Character::operator=(Character & rhs)
+Character &Character::operator=(Character const & rhs)
 {
-	*this = rhs;
+	this->name = rhs.name;
+	if (rhs.materias[0])
+		this->materias[0] = rhs.materias[0];
+	if (rhs.materias[1])
+		this->materias[1] = rhs.materias[1];
+	if (rhs.materias[2])
+		this->materias[2] = rhs.materias[2];
+	if (rhs.materias[3])
+		this->materias[3] = rhs.materias[3];
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 15:07:38 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/18 14:22:54 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/22 14:36:14 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Animal {
 
 	protected:
-	std::string type;
+	std::string _type;
 
 	public:
 	Animal();

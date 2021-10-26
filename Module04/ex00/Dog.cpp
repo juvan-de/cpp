@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 15:31:46 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/16 16:38:49 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/22 14:37:42 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 Dog::Dog()
 {
 	std::cout << "Dog created" << std::endl;
-	type = "Dog";
+	this->_type = "Dog";
 }
 
 Dog::Dog(Dog const & ref)
 {
-	this->type = ref.type;
+	this->_type = ref._type;
 }
 
 Dog	&Dog::operator=(Dog const & rhs)
 {
-	this->type = rhs.type;
+	this->_type = rhs._type;
 	std::cout << "Dog copied" << std::endl;
 	return (*this);
 }
 
 std::string	Dog::getType() const
 {
-	return(this->type);
+	return(this->_type);
 }
 
 void Dog::makeSound() const

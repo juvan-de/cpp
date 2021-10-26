@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 15:31:40 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/18 14:47:40 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/22 14:58:50 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Cat : public AAnimal
 	virtual ~Cat();
 	std::string	getType() const;
 	Cat	&operator=(Cat const & ref);
-	virtual void	makeSound() const;
+	void	makeSound() const;
 };
 
 #endif

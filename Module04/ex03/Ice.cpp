@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/18 17:36:51 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/20 14:28:57 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/10/26 16:56:14 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,18 @@ Ice::Ice()
 void	Ice::use(ICharacter& target)
 {
 	std::cout << "*shoots an ice bolt at " << target.getName() << std::endl;
+}
+
+Ice::Ice(Ice const & ref)
+{
+	*this = ref;
+	std::cout << "Ice copied" << std::endl;
+}
+
+Ice	&Ice::operator=(Ice const & rhs)
+{
+	this->type = rhs.type;
+	return (*this);
 }
 
 AMateria* Ice::clone() const

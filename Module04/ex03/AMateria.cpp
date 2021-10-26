@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/18 15:00:25 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/13 17:26:43 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/10/26 16:43:40 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ AMateria::AMateria(std::string const & type)
 {
 	this->type = type;
 	std::cout << "A materia of type " << this->type << " has been created" << std::endl;
+}
+
+AMateria &AMateria::operator=(AMateria & rhs)
+{
+	this->type = rhs.getType();
+	return (*this);
 }
 
 std::string const & AMateria::getType() const

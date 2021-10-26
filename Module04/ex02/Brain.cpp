@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/18 12:00:34 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/18 12:08:13 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/26 14:24:35 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,12 @@ Brain::Brain()
 
 Brain::Brain(Brain const & ref)
 {
-	std::cout << "brain copied" << std::endl;
-	for (int i = 0; i < 100; i++)
-	{
-		this->ideas[i] = ref.ideas[i];
-	}
+	*this = ref;
 }
 
 Brain	&Brain::operator=(Brain const & rhs)
 {
+	std::cout << "brain copied" << std::endl;
 	for (int i = 0; i < 100; i++)
 	{
 		this->ideas[i] = rhs.ideas[i];

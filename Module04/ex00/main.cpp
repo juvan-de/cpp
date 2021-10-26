@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 15:28:24 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/18 12:15:15 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/22 14:43:24 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ int main()
 	meta->makeSound();
 	a->makeSound();
 	b->makeSound();
-	delete meta;
 	delete j;
 	delete i;
+	delete meta;
+	delete a;
+	delete b;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 15:31:46 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/18 14:36:05 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/26 14:21:41 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,28 @@
 
 Dog::Dog()
 {
-	std::cout << "Dog created" << std::endl;
 	Brain* brain = new Brain();
+	std::cout << "Dog is born" << std::endl;
 
-	brain = this->brain;
+	this->brain = brain;
 	type = "Dog";
 }
 
 Dog::Dog(Dog const & ref)
 {
-	this->brain = ref.brain;
+	std::cout << "Dog copied" << std::endl;
+	Brain* brain = new Brain(*(ref.brain));
+	this->brain = brain;
 	this->type = ref.type;
 }
 
 Dog	&Dog::operator=(Dog const & rhs)
 {
+	for (int i = 0; i < 100; i++)
+	{
+		this->brain->ideas[i] = rhs.brain->ideas[i];
+	}
 	this->type = rhs.type;
-	this->brain = rhs.brain;
 	std::cout << "Dog copied" << std::endl;
 	return (*this);
 }

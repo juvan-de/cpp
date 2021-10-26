@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 15:31:43 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/16 16:39:10 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/22 14:39:14 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 Cat::Cat()
 {
 	std::cout << "Cat created" << std::endl;
-	type = "Cat";
+	this->_type = "Cat";
 }
 
 Cat::Cat(Cat const & ref)
 {
-	this->type = ref.type;
+	this->_type = ref._type;
 }
 
 Cat	&Cat::operator=(Cat const & rhs)
 {
-	this->type = rhs.type;
+	this->_type = rhs._type;
 	std::cout << "Cat copied" << std::endl;
 	return (*this);
 }
 
 std::string	Cat::getType() const
 {
-	return(this->type);
+	return(this->_type);
 }
 
 void Cat::makeSound() const

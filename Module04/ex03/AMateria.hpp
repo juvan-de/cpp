@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/18 15:00:33 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/09/13 17:19:56 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/10/26 16:39:40 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class AMateria
 	AMateria(std::string const & type);
 	~AMateria();
 	std::string const & getType() const;
+	AMateria &operator=(AMateria & rhs);
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter& target);
 };

@@ -6,7 +6,7 @@
 /*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/13 17:35:08 by juvan-de      #+#    #+#                 */
-/*   Updated: 2021/09/20 14:24:14 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/10/26 16:56:24 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@ Cure::Cure()
 {
 	AMateria::type = "cure";
 	std::cout << "Cure materia made" << std::endl;
+}
+
+Cure::Cure(Cure const & ref)
+{
+	*this = ref;
+	std::cout << "Cure copied" << std::endl;
+}
+
+Cure	&Cure::operator=(Cure const & rhs)
+{
+	this->type = rhs.type;
+	return(*this);
 }
 
 void	Cure::use(ICharacter& target)

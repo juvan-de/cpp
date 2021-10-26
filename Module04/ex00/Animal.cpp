@@ -6,7 +6,7 @@
 /*   By: julesvanderhoek <julesvanderhoek@studen      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/16 15:11:01 by julesvander   #+#    #+#                 */
-/*   Updated: 2021/08/16 16:55:37 by julesvander   ########   odam.nl         */
+/*   Updated: 2021/10/22 14:39:53 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Animal::Animal(Animal const & ref)
 
 Animal	&Animal::operator=(Animal const & rhs)
 {
-	this->type = rhs.type;
+	this->_type = rhs._type;
 	return (*this);
 }
 
@@ -36,7 +36,7 @@ void	Animal::makeSound() const
 
 std::string	Animal::getType() const
 {
-	return (this->type);
+	return (this->_type);
 }
 
 
