@@ -6,11 +6,10 @@
 /*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/29 14:54:19 by juvan-de      #+#    #+#                 */
-/*   Updated: 2021/11/02 13:16:05 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/11/02 14:15:55 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-//_target(target), _name("PresidentialPardonForm"), _sign_grade(25), _exec_grade(5), _signed(false)
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("PresidentialPardonForm", 25, 5)

@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   RobotomyRequestForm.hpp                            :+:    :+:            */
+/*   Intern.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/10/29 15:01:15 by juvan-de      #+#    #+#                 */
-/*   Updated: 2021/11/02 13:11:06 by juvan-de      ########   odam.nl         */
+/*   Created: 2021/11/02 13:49:10 by juvan-de      #+#    #+#                 */
+/*   Updated: 2021/11/02 14:02:25 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMY_REQUEST_FORM_HPP
-# define ROBOTOMY_REQUEST_FORM_HPP
+#ifndef INTERN_HPP
+# define INTERN_HPP
 
 # include <string>
 # include <iostream>
 # include "Form.hpp"
 
-class	RobotomyRequestForm : public Form
+class	Intern
 {
-	private:
-	RobotomyRequestForm();
-	
 	public:
-	RobotomyRequestForm(std::string target);
-	RobotomyRequestForm(const RobotomyRequestForm& ref);
-	RobotomyRequestForm& operator=(const RobotomyRequestForm& ref);
-	~RobotomyRequestForm();
-	bool		execute(Bureaucrat const & executor) const;
+
+	Intern();
+	Form	*makeForm(std::string name, std::string target) const;
+	Intern(const Intern& ref);
+	Intern& operator=(const Intern& ref);
+	~Intern();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/29 11:40:30 by juvan-de      #+#    #+#                 */
-/*   Updated: 2021/11/02 13:39:13 by juvan-de      ########   odam.nl         */
+/*   Updated: 2021/11/02 14:27:10 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class	Form
 	int			getExecGrade(void) const;
 	bool		isSigned(void) const;
 	bool virtual	execute(Bureaucrat const & executor) const = 0;
-	~Form();
+	virtual ~Form();
 	class GradeTooHighException : public std::exception
 		{
 			const char *what(void) const throw()
