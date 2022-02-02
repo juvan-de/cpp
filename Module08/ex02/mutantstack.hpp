@@ -6,7 +6,7 @@
 /*   By: juvan-de <juvan-de@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/24 20:28:58 by juvan-de      #+#    #+#                 */
-/*   Updated: 2021/11/24 21:09:44 by juvan-de      ########   odam.nl         */
+/*   Updated: 2022/02/02 12:50:47 by juvan-de      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <string>
 # include <iostream>
 # include <stack>
-template <typename T>
-	class	MutantStack : public std::stack<T>
+template <typename T, typename container = std::deque<T> >
+	class	MutantStack : public std::stack<T, container>
 	{
 		public:
 		
@@ -25,7 +25,7 @@ template <typename T>
 		MutantStack(const MutantStack& ref);
 		MutantStack& operator=(const MutantStack& ref);
 		~MutantStack() {};
-		typedef typename std::deque<T>::iterator iterator;
+		typedef typename container::iterator iterator;
 		iterator	begin()
 		{
 			return(this->c.begin());

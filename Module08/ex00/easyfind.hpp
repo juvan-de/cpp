@@ -4,6 +4,7 @@
 # include <string>
 # include <iostream>
 # include <exception>
+# include <algorithm>
 
 class intNotFound : public std::exception
 {
@@ -16,13 +17,10 @@ class intNotFound : public std::exception
 template <typename T>
 	int	easyfind(T container, int needle)
 	{
-		int i = 0;
-		while (i < container.size())
-		{
-			if (container[i] == needle)
-				return (container[i]);
-			i++;	
-		}
-		throw intNotFound();
+		typename T::iterator p;
+		p = std::find(container.begin(), container.end(), needle);
+		if (p == container.end())
+			throw intNotFound();
+		return (*p);
 	}
 #endif
